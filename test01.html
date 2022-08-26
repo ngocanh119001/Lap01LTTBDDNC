@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+   
+<div id="root">
+</div>
+<script>
+    const body = document.getElementById("root");
+
+    const ipa = document.createElement("input")    
+    ipa.setAttribute("id", "a")
+
+    const br = document.createElement("br")
+     
+    const ipb = document.createElement("input")
+    ipb.setAttribute("id", "b")
+
+    const btn = document.createElement("button")
+    btn.setAttribute("id","btn")
+
+    const div1 = document.createElement("div")
+    div1.setAttribute("id","div1")
+    btn.innerHTML = "Sum"
+    
+    body.appendChild(ipa)
+    body.appendChild(br)
+    body.appendChild(ipb) 
+    body.appendChild(btn)
+    body.appendChild(div1)
+
+    const summ = (a, b) => {
+        const kq = parseInt(a) + parseInt(b)
+        const k = document.getElementById("div1")
+        console.log(k)
+        body.appendChild(k)
+        alert(kq)
+    }
+    btn.onclick = () => summ(ipa.value, ipb.value)
+    
+
+</script>
+</body>
+
+</html>

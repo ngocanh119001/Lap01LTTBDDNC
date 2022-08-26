@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+    <h2>JavaScript Validation</h2>
+    <form method="GET" action="process-action.html" onsubmit="return validateForm()" name="form">
+        a <input id="aid" type="text" name="a">
+        <p></p>
+        b <input type="text" name="b" id="bid">
+        <p></p>
+    </form>
+    <button type="button" onclick="myFunction()">Sum</button>
+    <p id="sum"></p>
+    <script validateForm()>
+        function myFunction() {
+            var x = form["a"].value
+            var y = form["b"].value
+            var s = (Number(x)) + (Number(y));
+
+            document.getElementById('sum').innerHTML = "tong a + b =  " + s;
+
+        }
+    </script>
+
+</body>
+</html>
